@@ -1,0 +1,47 @@
+function setup() {
+  createCanvas(400, 400)
+}
+
+function draw(){
+  background(220)
+  noStroke()
+  
+  //Button shadow
+  fill(0)
+  rect(55, 280, 100, 75)
+  rect(255, 280, 100, 75)
+  
+  //Blue button apperance and animation
+  fill(100, 100, 255)
+  if(mouseIsPressed == true && mouseY > 275 && mouseY < 350 && mouseX > 50 && mouseX < 150){
+    //Button down
+    rect(54, 279, 100, 75)
+  }
+  else{
+    //Button up
+    rect(50, 275, 100, 75)
+  }
+  
+  //Red button apperance and animation
+  fill(255, 100, 100)
+  if(mouseIsPressed == true && mouseY > 275 && mouseY < 350 && mouseX > 250 && mouseX < 350){
+    //Button down
+    rect(254, 279, 100, 75)
+  }
+  else{
+    //Button up
+    rect(250, 275, 100, 75)
+  }  
+}
+
+function mouseReleased(){
+  //Button functionality
+  if(mouseY > 275 && mouseY < 350){
+    if(mouseX > 50 && mouseX < 150){
+      //Left button
+    }
+    else if(mouseX > 250 && mouseX < 350){
+      //Right button
+    }
+  }
+}
